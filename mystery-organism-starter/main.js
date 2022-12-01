@@ -34,6 +34,20 @@ const pAequorFactory = (num, dnaArr) =>{
       this.dna[randomIndex] = newBase;
       return this.dna;
       
+    },
+    //compareDNA function is used to compare the object's dna 
+    //with another object's dna
+    compareDNA : function (pAequor) {
+      let count = 0;
+      
+      for(let i = 0; i < 15; i++){
+        if(this.dna[i] === pAequor[i]){
+          count++;
+        }
+      }
+      const percentage = ((count / 15) * 100).toFixed();
+      console.log(`specimen #1 and specimen #2 have ${percentage}% DNA in common.`)
+
     }
 
   }
@@ -42,10 +56,12 @@ const pAequorFactory = (num, dnaArr) =>{
   
 }
 let newSpecie = pAequorFactory(1, mockUpStrand());
+console.log(newSpecie.dna);
+//console.log(newSpecie.mutate());
+let anotherSpecie = pAequorFactory(2, mockUpStrand());
+console.log(anotherSpecie.dna);
+newSpecie.compareDNA(anotherSpecie.dna);
 
-console.log(newSpecie);
-
-console.log(newSpecie.mutate());
 
 
 
