@@ -76,6 +76,18 @@ const pAequorFactory = (num, dnaArr) =>{
 
   
 }
+//create batch of 30 spicies for later experiment
+const batch =[];
+let assignednum =0;
+while(batch.length != 30){
+  //using wilLikelySurvive method to filter the specie with 60% of C or G only
+  let newP = pAequorFactory(assignednum,mockUpStrand());
+  if(newP.willLikelySurvive()){
+    batch.push(newP);
+    assignednum++;
+  }
+
+}
 let newSpecie = pAequorFactory(1, mockUpStrand());
 console.log(newSpecie.dna);
 //console.log(newSpecie.mutate());
@@ -84,6 +96,8 @@ console.log(anotherSpecie.dna);
 newSpecie.compareDNA(anotherSpecie.dna);
 let aA = pAequorFactory(3,['C','G','C','G','C','G','C','G','G','C','G','G','G','C','G'])
 console.log(aA.willLikelySurvive());
+
+console.log(batch);
 
 
 
