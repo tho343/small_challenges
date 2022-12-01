@@ -48,6 +48,27 @@ const pAequorFactory = (num, dnaArr) =>{
       const percentage = ((count / 15) * 100).toFixed();
       console.log(`specimen #1 and specimen #2 have ${percentage}% DNA in common.`)
 
+    },
+    //this willLikelySurvice function will evalute the likel survive
+    //by calculating the occurrences of 'G'
+    //and 'C', which should be over 60%
+    willLikelySurvive: function(){
+      let cCount = 0;
+      let gCount = 0;
+      for(let i of this.dna){
+        if(i === 'C'){
+          cCount++;
+        }
+        if(i === 'G'){
+          gCount++;
+        }
+      }
+      if((cCount/15 >= 0.6) || (gCount/15 >= 0.6)){
+        return true;
+      } else{
+        return false;
+      }
+      
     }
 
   }
@@ -61,6 +82,8 @@ console.log(newSpecie.dna);
 let anotherSpecie = pAequorFactory(2, mockUpStrand());
 console.log(anotherSpecie.dna);
 newSpecie.compareDNA(anotherSpecie.dna);
+let aA = pAequorFactory(3,['C','G','C','G','C','G','C','G','G','C','G','G','G','C','G'])
+console.log(aA.willLikelySurvive());
 
 
 
