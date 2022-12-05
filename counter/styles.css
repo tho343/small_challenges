@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+    padding: 100px;
+}
+span{
+    font-size: 100px;
+}
+.btn-container{
+    margin: 20px 20px;
+}
+.decrease {
+    color:red;
+}
+.increase {
+    color: green;
+}
