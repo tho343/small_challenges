@@ -21,6 +21,12 @@ a{
 }
 .main-container{
     display: block;
-    justify-content: center;
-    align-items: center;
+    
+}
+.main-container h2{
+    text-align: center;
+}
+.btn-container{
+    
+    text-align: center;
 }
