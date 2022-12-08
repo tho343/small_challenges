@@ -53,7 +53,8 @@ sections.forEach(function(section){
         const fixedNavBar = navbar.classList.contains("fixed-nav");
         if(!fixedNavBar){
             position = position - headerHeight;
-        }
+        
+            //for small screen : when the links toggle involved
         if(navHeight > 80 ){
             position = position + containerHeight;
         }
