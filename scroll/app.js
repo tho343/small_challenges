@@ -39,6 +39,7 @@ sections.forEach(function(section){
         
         e.preventDefault();
         const id = e.currentTarget.getAttribute("href").slice(1);
+        console.log(id);
         const element = document.getElementById(id);
         //calculate heights
         const navHeight = document.querySelector(".nav-header").getBoundingClientRect().height;
@@ -52,9 +53,9 @@ sections.forEach(function(section){
         //from its normal float.
         const fixedNavBar = navbar.classList.contains("fixed-nav");
         if(!fixedNavBar){
-            position = position - headerHeight;
+            position = position - headerHeight;}
         
-            //for small screen : when the links toggle involved
+            //for small screen : when the links toggle involved,
         if(navHeight > 80 ){
             position = position + containerHeight;
         }
