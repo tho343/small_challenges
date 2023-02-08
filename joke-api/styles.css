@@ -1,0 +1,50 @@
+*{ text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    margin: 0;
+    background-color: #BACBA9;
+    
+
+}
+.joke-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:auto;
+    transform: (-50%,-50%);
+    width: 80vmin;
+    height: auto;
+    background-color: #3f4739;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top:100px;
+    box-shadow: 20px 20px 40px  rgba(0,0,0,0.4);
+}
+p{
+    line-height: 35px;
+    word-wrap: break-word;
+    font-size: 16px;
+    font-weight: 400;
+    opacity:1;
+    animation: fadeIn 1.5s;
+
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+
+button{
+    padding: 10px;
+    font-weight: 600;
+    font-size:16px;
+    background-color: rgb(179, 201, 200);
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    box-shadow: 10px 10px 10px  rgba(0,0,0,0.4);
+}
